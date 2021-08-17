@@ -1,3 +1,21 @@
 .home {
-    background-color: aquamarine;
+    background-image: linear-gradient(to bottom right, dodgerblue, lightskyblue);
 }
+
+.title-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    height: calc(100vh - 85px);
+}
+
+.title-description-text {
+    padding-bottom: 15px;
+}
+
+
+
+
+
