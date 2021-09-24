@@ -4,16 +4,16 @@
 
 .sections {
     width: 100%;
-    height: calc(100vh - 85px);
+    /*height: calc(100vh - 85px);*/
     background-color: lightsalmon;
     position: relative;
-    top: 85px;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    /*scroll-behavior: smooth;*/
+    /*scroll-snap-type: y mandatory;*/
+    z-index: -1;
 }
 
 .sections > *{
     width: 100%;
-    height: calc(100vh - 85px);
-    scroll-snap-align: start;
+    /*height: calc(100vh - 85px);*/
+    /*scroll-snap-align: start;*/
 }

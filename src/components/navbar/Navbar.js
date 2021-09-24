@@ -1,22 +1,67 @@
-import React from 'react';
+/*
+import React, {useState} from 'react';
 import './navbar.css';
+// import {MenuItems} from "./MenuItems";
+// import { Button } from '../Button';
 
 const Navbar = () => {
+    const [open, setOpen] = useState(false);
+
+
+    const handleClick = () => setOpen(!open);
+    const closeMobileMenu = () => setOpen(false);
+
     return (
-        <div className="navbar">
+        <nav className="navbar">
             <div className="navbar-container">
-                <div className="navbar-left">
-                    <a href="#home" className="navbar-brand-name">ANDRÉ FLEISCHHACKER - WEB DEV</a>
+                <a href="#home" className="navbar-brand-name">
+                    ANDRÉ FLEISCHHACKER - WEB DEV
+                </a>
+                <div className="menu-icon" onClick={handleClick}>
+                    <i className={open ? "fas fa-times" : "fas fa-bars"}/>
                 </div>
-                <div className="navbar-right">
-                    <a href="#about" className="navbar-about">ABOUT</a>
-                    <a href="#skills" className="navbar-skills">SKILLS</a>
-                    <a href="#portfolio" className="navbar-portfolio">PORTFOLIO</a>
-                    <a href="#contact" className="navbar-contact">CONTACT</a>
-                </div>
+                <ul className={open ? "nav-menu active" : "nav-menu"}>
+                    {/!*{MenuItems.map((item, index) => {*!/}
+                    {/!*    return (*!/}
+                    {/!*        <li key={index}>*!/}
+                    {/!*            <a className={item.className} href={item.url}>*!/}
+                    {/!*                {item.title}*!/}
+                    {/!*            </a>*!/}
+                    {/!*        </li>*!/}
+                    {/!*    )*!/}
+                    {/!*})}*!/}
+                    {/!*<Button>Close</Button>*!/}
+
+                    <li className="nav-item">
+                        <a href="#about" className="nav-links" onClick={closeMobileMenu}>
+                            ABOUT
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#skills" className="nav-links" onClick={closeMobileMenu}>
+                            SKILLS
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#portfolio" className="nav-links" onClick={closeMobileMenu}>
+                            PORTFOLIO
+                        </a>
+                    </li>
+                    <li className="nav-item">
+                        <a href="#contact" className="nav-links" onClick={closeMobileMenu}>
+                            CONTACT
+                        </a>
+                    </li>
+                    <li className="nav-item nav-links-mobile">
+                        <a href="#home" className="nav-links-mobile" onClick={closeMobileMenu}>
+                            Close
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
     )
 }
 
 export default Navbar;
+*/

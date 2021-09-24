@@ -1,10 +1,14 @@
 import React from 'react';
+import { useState } from 'react';
 import './contact.css';
 import mailsvg from '../../images/message-369540.svg';
 
 const Contact = () => {
+    const [message, setMessage] = useState(false);
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        setMessage(true);
     }
 
     return (
@@ -18,6 +22,7 @@ const Contact = () => {
                     <input type="text" placeholder="Email"/>
                     <textarea placeholder="Message"></textarea>
                     <button type="submit">Send</button>
+                    {message && <span>Thanks for your message, i'll reply soon :-)</span>}
                 </form>
             </div>
         </div>

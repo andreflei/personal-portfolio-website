@@ -64,3 +64,8 @@ button {
     font-weight: 500;
     cursor: pointer;
 }
+
+span {
+    color: cornflowerblue;
+    font-weight: 500;
+}
