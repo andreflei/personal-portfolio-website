@@ -6,28 +6,21 @@ import About from "./components/about/About";
 import Skills from "./components/skills/Skills";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
-import Header from "./components/navbar/Header";
+import Header from "./components/header/Header";
+// import Navbar from "./components/header/Navbar";
 
 
 function App() {
     return (
         <div className="app">
-            {/*<Navbar/>*/}
-            <Header/>
             <Router>
-                <Route path="/home" component={Home}/>
+                <Route component={Header}/>
+                <Route path="/" component={Home} exact/>
                 <Route path="/about" component={About}/>
                 <Route path="/skills" component={Skills}/>
                 <Route path="/portfolio" component={Portfolio}/>
                 <Route path="/contact" component={Contact}/>
             </Router>
-            {/*<div className="sections">*/}
-            {/*    <Home/>*/}
-            {/*    <About/>*/}
-            {/*    <Skills/>*/}
-            {/*    <Portfolio/>*/}
-            {/*    <Contact/>*/}
-            {/*</div>*/}
         </div>
     );
 }
