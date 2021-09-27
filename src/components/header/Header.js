@@ -1,3 +1,4 @@
+/*
 import styled from 'styled-components';
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
@@ -104,3 +105,4 @@ const MobileMenuIcon = styled.div`
 
 export default Header;
 
+*/

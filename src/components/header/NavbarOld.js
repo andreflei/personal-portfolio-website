@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-const Navbar = () => {
+const NavbarOld = () => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -93,4 +93,4 @@ const StyledLink = styled(Link)`
 `
 
 
-export default Navbar;
+export default NavbarOld;
