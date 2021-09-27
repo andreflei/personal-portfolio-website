@@ -1,15 +1,26 @@
-import React from 'react';
-import './home.css'
+import React, { useState } from 'react';
+import Sidebar from '../sidebar/Sidebar';
+import Navbar from "../navbar/Navbar";
+import About from "../about/About";
+import Skills from "../skills/Skills";
+import {homeObjOne} from "../skills/Data";
+import Portfolio from "../portfolio/Portfolio";
+//T0-DO: Inhalt zu App.js verschieben
 
 const Home = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleIsOpen = () => setIsOpen(!isOpen);
+
     return (
-        <div className="home" id="home">
-            <div className="title-description">
-                <h2 className="title-description-text">ANDRÉ FLEISCHHACKER</h2>
-                <h3 className="title-description-text">Junior Web Developer</h3>
-            </div>
-        </div>
-    )
-}
+        <>
+            <Sidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+            <Navbar toggleIsOpen={toggleIsOpen}/>
+            <About/>
+            <Skills {...homeObjOne}/>
+            <Portfolio/>
+        </>
+    );
+};
 
 export default Home;

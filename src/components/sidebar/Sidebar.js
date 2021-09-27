@@ -4,19 +4,19 @@ import {Link as LinkR} from 'react-router-dom';
 import styled from 'styled-components';
 import {FaTimes} from 'react-icons/fa';
 
-const Sidebar = () => {
+const Sidebar = ({isOpen, toggleIsOpen}) => {
 
     return (
-        <SidebarContainer>
-            <Icon>
+        <SidebarContainer isOpen={isOpen} onClick={toggleIsOpen}>
+            <Icon onClick={toggleIsOpen}>
                 <CloseIcon />
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="/about">ABOUT</SidebarLink>
-                    <SidebarLink to="/skills">SKILLS</SidebarLink>
-                    <SidebarLink to="/portfolio">PORTFOLIO</SidebarLink>
-                    <SidebarLink to="/contact">CONTACT</SidebarLink>
+                    <SidebarLink to="/about" onClick={toggleIsOpen}>ABOUT</SidebarLink>
+                    <SidebarLink to="/skills" onClick={toggleIsOpen}>SKILLS</SidebarLink>
+                    <SidebarLink to="/portfolio" onClick={toggleIsOpen}>PORTFOLIO</SidebarLink>
+                    <SidebarLink to="/contact" onClick={toggleIsOpen}>CONTACT</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
                     <SidebarRoute to="/signin">Sign In</SidebarRoute>

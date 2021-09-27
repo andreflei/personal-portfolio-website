@@ -4,13 +4,13 @@ import {FaBars} from 'react-icons/fa';
 import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
 
-const Navbar = () => {
+const Navbar = ({ toggleIsOpen }) => {
 
     return (
         <Nav>
             <NavbarContainer>
                 <NavLogo to="/">ANDRÉ FLEISCHHACKER</NavLogo>
-                <MobileIcon>
+                <MobileIcon onClick={toggleIsOpen}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
@@ -27,6 +27,9 @@ const Navbar = () => {
                         <NavLinks to="/contact">CONTACT</NavLinks>
                     </NavItem>
                 </NavMenu>
+                <NavBtn>
+                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                </NavBtn>
             </NavbarContainer>
         </Nav>
     );
@@ -35,7 +38,7 @@ const Navbar = () => {
 const Nav = styled.nav`
   background: #000;
   height: 80px;
-  //margin-top: -80px;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -15,8 +15,9 @@ function App() {
     return (
         <div className="app">
             <Router>
-                <Sidebar/>
-                <Route component={Navbar}/>
+                <Home/>
+                {/*<Sidebar/>*/}
+                {/*<Route component={Navbar}/>*/}
                 {/*<Route path="/" component={Home} exact/>*/}
                 {/*<Route path="/about" component={About}/>*/}
                 {/*<Route path="/skills" component={Skills}/>*/}
