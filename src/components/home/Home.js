@@ -5,6 +5,7 @@ import About from "../about/About";
 import Skills from "../skills/Skills";
 import {homeObjOne} from "../skills/Data";
 import Portfolio from "../portfolio/Portfolio";
+import Footer from "../footer/Footer";
 //T0-DO: Inhalt zu App.js verschieben
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
             <About/>
             <Skills {...homeObjOne}/>
             <Portfolio/>
+            <Footer/>
         </>
     );
 };

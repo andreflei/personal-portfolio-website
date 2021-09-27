@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Icon1 from '../../images/undraw_react_y7wq.svg';
 
 const Portfolio = () => {
     return (
@@ -12,14 +13,14 @@ const Portfolio = () => {
                     <PortfolioP>This is a template Netflix clone created with React.</PortfolioP>
                 </PortfolioCard>
                 <PortfolioCard>
-                    <PortfolioIcon src={Icon2}/>
+                    <PortfolioIcon src={Icon1}/>
                     <PortfolioH2>Project 2</PortfolioH2>
-                    <PortfolioP>lorem epsum idee</PortfolioP>
+                    <PortfolioP>This is a template Netflix clone created with React.</PortfolioP>
                 </PortfolioCard>
                 <PortfolioCard>
-                    <PortfolioIcon src={Icon3}/>
+                    <PortfolioIcon src={Icon1}/>
                     <PortfolioH2>Project 3</PortfolioH2>
-                    <PortfolioP>testetkjkgjdkjhgdkjgajdgkdjg</PortfolioP>
+                    <PortfolioP>This is a template Netflix clone created with React.</PortfolioP>
                 </PortfolioCard>
             </PortfolioWrapper>
         </PortfolioContainer>
@@ -65,7 +66,8 @@ const PortfolioWrapper = styled.div`
 const PortfolioCard = styled.div`
   background: #fff;
   display: flex;
-  flex-direction: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
   max-height: 340px;
