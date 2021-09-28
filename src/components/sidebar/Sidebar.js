@@ -13,14 +13,14 @@ const Sidebar = ({isOpen, toggleIsOpen}) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="/about" onClick={toggleIsOpen}>ABOUT</SidebarLink>
-                    <SidebarLink to="/skills" onClick={toggleIsOpen}>SKILLS</SidebarLink>
-                    <SidebarLink to="/portfolio" onClick={toggleIsOpen}>PORTFOLIO</SidebarLink>
-                    <SidebarLink to="/contact" onClick={toggleIsOpen}>CONTACT</SidebarLink>
+                    <SidebarLink to="about" onClick={toggleIsOpen} offset={-80}>ABOUT</SidebarLink>
+                    <SidebarLink to="skills" onClick={toggleIsOpen} offset={-80}>SKILLS</SidebarLink>
+                    <SidebarLink to="portfolio" onClick={toggleIsOpen} offset={-80}>PORTFOLIO</SidebarLink>
+                    <SidebarLink to="contact" onClick={toggleIsOpen} offset={-80}>CONTACT</SidebarLink>
                 </SidebarMenu>
-                <SideBtnWrap>
-                    <SidebarRoute to="/signin">Sign In</SidebarRoute>
-                </SideBtnWrap>
+                {/*<SideBtnWrap>*/}
+                {/*    <SidebarRoute to="/signin">Sign In</SidebarRoute>*/}
+                {/*</SideBtnWrap>*/}
             </SidebarWrapper>
         </SidebarContainer>
     )
@@ -87,29 +87,29 @@ const SidebarLink = styled(LinkS)`
   }
 `
 
-const SideBtnWrap = styled.div`
-  display: flex;
-  justify-content: center;
-`
+// const SideBtnWrap = styled.div`
+//   display: flex;
+//   justify-content: center;
+// `
 
-const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 16px 64px;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
-`
+// const SidebarRoute = styled(LinkR)`
+//   border-radius: 50px;
+//   background: #01bf71;
+//   white-space: nowrap;
+//   padding: 16px 64px;
+//   color: #010606;
+//   font-size: 16px;
+//   outline: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
+//
+//   &:hover {
+//     transition: all 0.2s ease-in-out;
+//     background: #fff;
+//     color: #010606;
+//   }
+// `
 
 export default Sidebar;

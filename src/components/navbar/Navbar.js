@@ -1,42 +1,69 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {Link as LinkR} from 'react-router-dom';
 import {Link as LinkS} from 'react-scroll';
+import {animateScroll as scroll} from 'react-scroll';
 
-const Navbar = ({ toggleIsOpen }) => {
+const Navbar = ({toggleIsOpen}) => {
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if (window.scrollY >= 80) {
+            setScrollNav(true)
+        } else {
+            setScrollNav(false)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeNav)
+    }, []);
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
 
     return (
-        <Nav>
+        <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to="/">ANDRÉ FLEISCHHACKER</NavLogo>
+                <NavLogo to="/" onClick={toggleHome}>ANDRÉ FLEISCHHACKER</NavLogo>
                 <MobileIcon onClick={toggleIsOpen}>
-                    <FaBars />
+                    <FaBars/>
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="/about">ABOUT</NavLinks>
+                        <NavLinks to="about"
+                                  smooth={true} duration={500} spy={true} exact='true' offset={-80}
+                        >ABOUT</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="/skills">SKILLS</NavLinks>
+                        <NavLinks to="skills"
+                                  smooth={true} duration={500} spy={true} exact='true' offset={-80}
+                        >SKILLS</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="/portfolio">PORTFOLIO</NavLinks>
+                        <NavLinks to="portfolio"
+                                  smooth={true} duration={500} spy={true} exact='true' offset={-80}
+                        >PORTFOLIO</NavLinks>
                     </NavItem>
                     <NavItem>
-                        <NavLinks to="/contact">CONTACT</NavLinks>
+                        <NavLinks to="contact"
+                                  smooth={true} duration={500} spy={true} exact='true' offset={-80}
+                        >CONTACT</NavLinks>
                     </NavItem>
                 </NavMenu>
-                <NavBtn>
-                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
-                </NavBtn>
+                {/*<NavBtn>*/}
+                {/*    <NavBtnLink to="/signin">Sign In</NavBtnLink>*/}
+                {/*</NavBtn>*/}
             </NavbarContainer>
         </Nav>
     );
 };
 
 const Nav = styled.nav`
-  background: #000;
+  //background: #000;
+  background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -47,7 +74,7 @@ const Nav = styled.nav`
   top: 0;
   z-index: 10;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 968px) {
     transition: 0.8s all ease;
   }
 `
@@ -72,11 +99,19 @@ const NavLogo = styled(LinkR)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+  
+  @media screen and (max-width: 420px) {
+    font-size: 0.8rem;
+  }
+  
+  @media screen and (max-width: 272px) {
+    display: none;
+  }
 `
 const MobileIcon = styled.div`
   display: none;
-  
-  @media screen and (max-width: 760px) {
+
+  @media screen and (max-width: 968px) { //früher: 768px
     display: block;
     position: absolute;
     top: 0;
@@ -85,6 +120,7 @@ const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: #fff;
+    
   }
 `
 
@@ -94,8 +130,8 @@ const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   //margin-right: -22px; //evtl nicht notwendig bei mir 
-  
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 968px) {//früher: 768px
     display: none;
   }
 `
@@ -106,6 +142,9 @@ const NavItem = styled.li`
 
 const NavLinks = styled(LinkS)`
   color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -113,37 +152,43 @@ const NavLinks = styled(LinkS)`
   height: 100%;
   cursor: pointer;
   
+  &:hover:not(&.active) {
+    color: sandybrown;
+    transition: 0.3s ease-in;
+  }
+
   &.active {
     border-bottom: 3px solid #01bf71;
   }
 `
-const NavBtn = styled.div`
-  display: flex;
-  align-items: center;
-  
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
 
-const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
-`
+// const NavBtn = styled.div`
+//   display: flex;
+//   align-items: center;
+//
+//   @media screen and (max-width: 768px) {
+//     display: none;
+//   }
+// `
+
+// const NavBtnLink = styled(LinkR)`
+//   border-radius: 50px;
+//   background: #01bf71;
+//   white-space: nowrap;
+//   padding: 10px 22px;
+//   color: #010606;
+//   font-size: 16px;
+//   outline: none;
+//   border: none;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
+//
+//   &:hover {
+//     transition: all 0.2s ease-in-out;
+//     background: #fff;
+//     color: #010606;
+//   }
+// `
 
 export default Navbar;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Sidebar from '../sidebar/Sidebar';
 import Navbar from "../navbar/Navbar";
 import About from "../about/About";
@@ -6,6 +6,8 @@ import Skills from "../skills/Skills";
 import {homeObjOne} from "../skills/Data";
 import Portfolio from "../portfolio/Portfolio";
 import Footer from "../footer/Footer";
+import AboutMe from "../aboutMe/AboutMe";
+import Contact from "../contact/Contact";
 //T0-DO: Inhalt zu App.js verschieben
 
 const Home = () => {
@@ -15,11 +17,13 @@ const Home = () => {
 
     return (
         <>
-            <Sidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen} />
+            <Sidebar isOpen={isOpen} toggleIsOpen={toggleIsOpen}/>
             <Navbar toggleIsOpen={toggleIsOpen}/>
             <About/>
+            <AboutMe/>
             <Skills {...homeObjOne}/>
             <Portfolio/>
+            <Contact/>
             <Footer/>
         </>
     );

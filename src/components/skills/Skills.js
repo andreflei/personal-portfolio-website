@@ -5,7 +5,7 @@ import {Button} from '../ButtonElement';
 const Skills = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
     return (
       <>
-          <SkillsContainer lightBg={lightBg} id={id}>
+          <SkillsContainer lightBg={lightBg} id='skills'>
               <SkillsWrapper>
                   <SkillsRow imgStart={imgStart}>
                       <Column1>

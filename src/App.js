@@ -11,7 +11,7 @@ import Contact from "./components/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 
-function App() {
+const App = () => {
     return (
         <div className="app">
             <Router>
