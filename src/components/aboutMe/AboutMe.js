@@ -46,7 +46,7 @@ const AboutMeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: sandybrown;
+  background: chocolate;
 `
 
 const AboutMeH1 = styled.h1`

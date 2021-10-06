@@ -1,138 +1,106 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Button} from '../ButtonElement';
+import {FaHtml5,FaCss3Alt,SiJavascript,FaReact,SiStyledComponents,FaJava,SiMysql,FaGit} from "react-icons/all";
 
-const Skills = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
+const Skills = () => {
     return (
-      <>
-          <SkillsContainer lightBg={lightBg} id='skills'>
-              <SkillsWrapper>
-                  <SkillsRow imgStart={imgStart}>
-                      <Column1>
-                          <TextWrapper>
-                              <TopLine>{topLine}</TopLine>
-                              <Heading lightText={lightText}>{headLine}</Heading>
-                              <Subtitle darkText={darkText}>{description}</Subtitle>
-                              <BtnWrap>
-                                  <Button to="/home"
-                                  smooth={true}
-                                  duration={500}
-                                  spy={true}
-                                  exact="true"
-                                  offset={-80}
-                                  primary={primary ? 1 : 0}
-                                  dark={dark ? 1 : 0}
-                                  dark2={dark2 ? 1 : 0}
-                                  >{buttonLabel}</Button>
-                              </BtnWrap>
-                          </TextWrapper>
-                      </Column1>
-                      <Column2>
-                          <ImgWrap>
-                              <Img src={img} alt={alt}/>
-                          </ImgWrap>
-                      </Column2>
-                  </SkillsRow>
-              </SkillsWrapper>
-          </SkillsContainer>
-      </>
+        <SkillsContainer id='skills'>
+            <SkillsH1>SKILLS</SkillsH1>
+                <SkillsWrapper>
+                    <SkillsIcon>
+                        <FaHtml5/>
+                        <SkillsP>HTML 5</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <FaCss3Alt/>
+                        <SkillsP>CSS 3</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <SiJavascript/>
+                        <SkillsP>JavaScript</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <FaReact/>
+                        <SkillsP>React</SkillsP>
+                    </SkillsIcon>
+                </SkillsWrapper>
+                <SkillsWrapper>
+                    <SkillsIcon>
+                        <SiStyledComponents/>
+                        <SkillsP>Styled Components</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <FaJava/>
+                        <SkillsP>Java</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <SiMysql/>
+                        <SkillsP>MySQL</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <FaGit/>
+                        <SkillsP>Git</SkillsP>
+                    </SkillsIcon>
+                </SkillsWrapper>
+        </SkillsContainer>
     )
 };
 
 const SkillsContainer = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
-  
+    //background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+  background: #010606;
+
+
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
 `
 
-const SkillsWrapper = styled.div`
-  display: grid;
-  z-index: 1;
-  height: 860px;
-  width: 100%;
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 24px;
-  justify-content: center;
-`
+const SkillsH1 = styled.h1`
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 60px;
+  margin-top: 24px;
 
-const SkillsRow = styled.div`
-  display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
-  align-items: center;
-  grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
-  
-  @media screen and (max-width: 768px) {
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
-  }
-`
-
-const Column1 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col1;
-`
-
-const Column2 = styled.div`
-  margin-bottom: 15px;
-  padding: 0 15px;
-  grid-area: col2;
-`
-
-const TextWrapper = styled.div`
-  max-width: 540px;
-  padding-top: 0;
-  padding-bottom: 60px;
-`
-
-const TopLine = styled.p`
-  color: #01bf71;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-`
-
-const Heading = styled.h1`
-  margin-bottom: 24px;
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 600;
-  color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
-  
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    font-size: 2rem;
   }
 `
 
-const Subtitle = styled.p`
-  max-width: 440px;
-  margin-bottom: 35px;
-  font-size: 18px;
-  line-height: 24px;
-  color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
-`
-
-const BtnWrap = styled.div`
+const SkillsWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
-`
-
-const ImgWrap = styled.div`
-  max-width: 555px;
+  flex-direction: row;
+  z-index: 1;
   height: 100%;
+  width: 100%;
+  max-width: 900px;
+  justify-content: space-between;
+  margin-bottom: 25px;
 `
 
-const Img = styled.img`
-  width: 100%;
-  margin: 0 0 10px 0;
-  padding-right: 0;
+const SkillsIcon = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto 0 auto;
+`
+
+const SkillsP = styled.p`
+  display: flex;
+  flex-direction: row;
+  max-width: 80px;
+  font-size: 1rem;
+  color: #fff;
+  justify-self: center;
+  margin: 5px auto 0 auto;
 `
 
 export default Skills;
