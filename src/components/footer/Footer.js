@@ -83,7 +83,8 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.footer`
-  background-color: #101522;
+  //background-color: #101522;
+  background-color: #203B46;
 `
 const FooterWrap = styled.div`
   padding: 48px 24px;
