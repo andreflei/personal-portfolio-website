@@ -27,28 +27,32 @@ const Navbar = ({toggleIsOpen}) => {
     return (
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
-                <NavLogo to="/" onClick={toggleHome}>ANDRÉ FLEISCHHACKER</NavLogo>
-                <MobileIcon onClick={toggleIsOpen}>
+                <NavLogo to="/" onClick={toggleHome} scrollNav={scrollNav}>ANDRÉ FLEISCHHACKER</NavLogo>
+                <MobileIcon onClick={toggleIsOpen} scrollNav={scrollNav}>
                     <FaBars/>
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
                         <NavLinks to="about"
+                                  scrollNav={scrollNav}
                                   smooth={true} duration={500} spy={true} exact='true' offset={-80}
                         >ABOUT</NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to="skills"
+                                  scrollNav={scrollNav}
                                   smooth={true} duration={500} spy={true} exact='true' offset={-80}
                         >SKILLS</NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to="portfolio"
+                                  scrollNav={scrollNav}
                                   smooth={true} duration={500} spy={true} exact='true' offset={-80}
                         >PORTFOLIO</NavLinks>
                     </NavItem>
                     <NavItem>
                         <NavLinks to="contact"
+                                  scrollNav={scrollNav}
                                   smooth={true} duration={500} spy={true} exact='true' offset={-80}
                         >CONTACT</NavLinks>
                     </NavItem>
@@ -63,7 +67,7 @@ const Navbar = ({toggleIsOpen}) => {
 
 const Nav = styled.nav`
   //background: #000;
-  background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
+  background: ${({scrollNav}) => (scrollNav ? '#F4A261' : 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -90,7 +94,7 @@ const NavbarContainer = styled.div`
 `
 
 const NavLogo = styled(LinkR)`
-  color: #fff;
+  color: ${({scrollNav}) => (scrollNav ? '#000000' : '#FFFFFF')};
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -119,7 +123,7 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: ${({scrollNav}) => (scrollNav ? '#000000' : '#FFFFFF')};
     
   }
 `
@@ -141,7 +145,7 @@ const NavItem = styled.li`
 `
 
 const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: ${({scrollNav}) => (scrollNav ? '#000000' : '#FFFFFF')};
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -153,12 +157,12 @@ const NavLinks = styled(LinkS)`
   cursor: pointer;
   
   &:hover:not(&.active) {
-    color: sandybrown;
+    color: ${({scrollNav}) => (scrollNav ? '#FFFFFF' : '#2A9D8F')};
     transition: 0.3s ease-in;
   }
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #000000;
   }
 `
 

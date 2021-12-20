@@ -5,7 +5,7 @@ import Video from '../../videos/Plexus.mp4';
 import {Button} from '../ButtonElement';
 import aboutImg from '../../images/undraw_Coding_re_iv62.svg';
 
-//TO-DO: später noch in Home umbenennen
+//TODO: später noch in Home umbenennen
 
 const About = () => {
 
@@ -15,9 +15,6 @@ const About = () => {
 
     return (
         <AboutContainer>
-            <AboutBg>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4'/>
-            </AboutBg>
             <AboutContent>
                 <AboutImg src={aboutImg} alt='Developer activity'/>
                 <AboutH1>André Fleischhacker</AboutH1>
@@ -37,12 +34,11 @@ const About = () => {
 };
 
 const AboutContainer = styled.div`
-  background: #0c0c0c;
+  background: #264653;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  //height: 800px;
   position: relative;
   z-index: 1;
   height: 100vh; //fill complete screen height 
@@ -54,28 +50,9 @@ const AboutContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+    //background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
     z-index: 2;
   }
-`
-
-const AboutBg = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-`
-
-const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background: #232a34;
 `
 
 const AboutImg = styled.img`
@@ -98,7 +75,7 @@ const AboutContent = styled.div`
 `
 
 const AboutH1 = styled.h1`
-  color: #fff;
+  color: #FFFFFF;
   font-size: 48px;
   text-align: center;
 
@@ -113,7 +90,7 @@ const AboutH1 = styled.h1`
 
 const AboutP = styled.p`
   margin-top: 24px;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 24px;
   text-align: center;
   max-width: 600px;

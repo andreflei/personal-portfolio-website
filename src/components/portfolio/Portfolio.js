@@ -33,7 +33,7 @@ const PortfolioContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #010606;
+  background: #203B46;
   
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -90,7 +90,7 @@ const PortfolioIcon = styled.img`
 
 const PortfolioH1 = styled.h1`
   font-size: 2.5rem;
-  color: #fff;
+  color: #E9C46A;
   margin-bottom: 64px;
   
   @media screen and (max-width: 480px) {

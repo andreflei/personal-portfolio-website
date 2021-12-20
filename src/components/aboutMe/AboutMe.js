@@ -46,12 +46,12 @@ const AboutMeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: chocolate;
+  background: #203B46;
 `
 
 const AboutMeH1 = styled.h1`
   font-size: 2.5rem;
-  color: #fff;
+  color: #E9C46A;
   margin-bottom: 48px;
   margin-top: 24px;
 
@@ -72,7 +72,7 @@ const AboutMeWrapper = styled.div`
 
 const AboutMeP = styled.p`
   font-size: 1.2rem;
-  color: #fff;
+  color: #E9C46A;
   align-self: flex-start;
 `
 
@@ -83,7 +83,7 @@ const AboutMeHobbyWrapper = styled.div`
 
 const HobbyH2 = styled.h2`
   font-size: 1.5rem;
-  color: #fff;
+  color: #E9C46A;
   justify-self: center;
   align-self: center;
   margin-bottom: 20px;
@@ -104,7 +104,7 @@ const HobbyImg = styled.img`
 
 const HobbyP = styled.p`
   font-size: 1.5rem;
-  color: #fff;
+  color: #E9C46A;
 `
 
 export default AboutMe;

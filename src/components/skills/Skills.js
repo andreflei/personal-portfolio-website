@@ -54,7 +54,7 @@ const SkillsContainer = styled.div`
   align-items: center;
   color: #fff;
     //background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
-  background: #010606;
+  background: #264653;
 
 
   @media screen and (max-width: 768px) {
