@@ -13,7 +13,8 @@ const Sidebar = ({isOpen, toggleIsOpen}) => {
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink to="about" onClick={toggleIsOpen} offset={-80}>ABOUT</SidebarLink>
+                    <SidebarLink to="home" onClick={toggleIsOpen} offset={-80}>HOME</SidebarLink>
+                    <SidebarLink to="aboutMe" onClick={toggleIsOpen} offset={-80}>ABOUT</SidebarLink>
                     <SidebarLink to="skills" onClick={toggleIsOpen} offset={-80}>SKILLS</SidebarLink>
                     <SidebarLink to="portfolio" onClick={toggleIsOpen} offset={-80}>PORTFOLIO</SidebarLink>
                     <SidebarLink to="contact" onClick={toggleIsOpen} offset={-80}>CONTACT</SidebarLink>
