@@ -20,6 +20,7 @@ const Navbar = ({toggleIsOpen}) => {
         window.addEventListener('scroll', changeNav)
     }, []);
 
+    //TODO: scroll duration is faster
     const toggleHome = () => {
         scroll.scrollToTop();
     };
@@ -33,7 +34,13 @@ const Navbar = ({toggleIsOpen}) => {
                 </MobileIcon>
                 <NavMenu>
                     <NavItem>
-                        <NavLinks to="about"
+                        <NavLinks to="home"
+                                  scrollNav={scrollNav}
+                                  smooth={true} duration={500} spy={true} exact='true' offset={-80}
+                        >HOME</NavLinks>
+                    </NavItem>
+                    <NavItem>
+                        <NavLinks to="aboutMe"
                                   scrollNav={scrollNav}
                                   smooth={true} duration={500} spy={true} exact='true' offset={-80}
                         >ABOUT</NavLinks>
@@ -162,7 +169,7 @@ const NavLinks = styled(LinkS)`
   }
 
   &.active {
-    border-bottom: 3px solid #000000;
+    border-bottom: ${({scrollNav}) => (scrollNav ? '3px solid #000000' : '')}
   }
 `
 
