@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import Travelling from '../../images/undraw_adventure_4hum.svg';
+import Travelling from '../../images/undraw_adventure_re_ncqp.svg';
 import Bike from '../../images/undraw_biking_kc4f.svg';
 import Cooking from '../../images/undraw_barbecue_3x93.svg';
-import Gaming from '../../images/undraw_Gaming_re_cma2.svg';
-
+import Gaming from '../../images/undraw_gaming_re_cma2.svg';
 
 const AboutMe = () => {
 
@@ -45,7 +44,7 @@ const AboutMeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #203B46;
+  background: #264653;
 `
 
 const AboutMeH1 = styled.h1`
@@ -60,19 +59,25 @@ const AboutMeH1 = styled.h1`
 `
 
 const AboutMeWrapper = styled.div`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto 25px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 25px;
   padding: 0 50px;
+  
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
 `
 
 const AboutMeP = styled.p`
   font-size: 1.2rem;
   color: #E9C46A;
   align-self: flex-start;
+  text-align: start;
 `
 
 const AboutMeHobbyWrapper = styled.div`
@@ -83,8 +88,7 @@ const AboutMeHobbyWrapper = styled.div`
 const HobbyH2 = styled.h2`
   font-size: 1.5rem;
   color: #E9C46A;
-  justify-self: center;
-  align-self: center;
+  text-align: center;
   margin-bottom: 20px;
 `
 
@@ -104,6 +108,7 @@ const HobbyImg = styled.img`
 const HobbyP = styled.p`
   font-size: 1.5rem;
   color: #E9C46A;
+  text-align: center;
 `
 
 export default AboutMe;

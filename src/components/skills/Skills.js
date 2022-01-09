@@ -23,8 +23,6 @@ const Skills = () => {
                         <FaReact/>
                         <SkillsP>React</SkillsP>
                     </SkillsIcon>
-                </SkillsWrapper>
-                <SkillsWrapper>
                     <SkillsIcon>
                         <SiStyledComponents/>
                         <SkillsP>Styled Components</SkillsP>
@@ -54,12 +52,7 @@ const SkillsContainer = styled.div`
   align-items: center;
   color: #fff;
     //background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
-  background: #264653;
-
-
-  @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  }
+  background: #203B46;
 `
 
 const SkillsH1 = styled.h1`
@@ -74,14 +67,21 @@ const SkillsH1 = styled.h1`
 `
 
 const SkillsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  max-width: 900px;
-  justify-content: space-between;
-  margin-bottom: 25px;
+  max-width: 1000px;
+  margin: 0 auto 64px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  grid-gap: 48px;
+  padding: 0 50px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `
 
 const SkillsIcon = styled.div`

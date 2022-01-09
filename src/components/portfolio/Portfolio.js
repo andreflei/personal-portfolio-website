@@ -28,12 +28,12 @@ const Portfolio = () => {
 };
 
 const PortfolioContainer = styled.div`
-  height: 800px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #203B46;
+  background: #264653;
   
   @media screen and (max-width: 768px) {
     height: 1100px;
@@ -46,7 +46,7 @@ const PortfolioContainer = styled.div`
 
 const PortfolioWrapper = styled.div`
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto 64px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -92,6 +92,7 @@ const PortfolioH1 = styled.h1`
   font-size: 2.5rem;
   color: #E9C46A;
   margin-bottom: 64px;
+  margin-top: 24px;
   
   @media screen and (max-width: 480px) {
     font-size: 2rem;

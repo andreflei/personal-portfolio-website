@@ -17,7 +17,7 @@ const Homescreen = () => {
                 <AboutH1>André Fleischhacker</AboutH1>
                 <AboutP>Junior Web Developer</AboutP>
                 <AboutBtnWrapper>
-                    <Button to="signup" onMouseEnter={onHover}
+                    <Button to="contact" onMouseEnter={onHover}
                             onMouseLeave={onHover}
                             primary="true"
                             dark="true"
@@ -36,7 +36,6 @@ const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  //height: 800px;
   position: relative;
   z-index: 1;
   height: 100vh; //fill complete screen height 
@@ -72,7 +71,7 @@ const AboutContent = styled.div`
 `
 
 const AboutH1 = styled.h1`
-  color: #fff;
+  color: #FFFFFF;
   font-size: 48px;
   text-align: center;
 
@@ -87,7 +86,7 @@ const AboutH1 = styled.h1`
 
 const AboutP = styled.p`
   margin-top: 24px;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 24px;
   text-align: center;
   max-width: 600px;

@@ -1,3 +1,4 @@
+/*
 export const homeObjOne = {
     id: 'about',
     lightBg: false,
@@ -13,4 +14,4 @@ export const homeObjOne = {
     dark: true,
     primary: true,
     darkText: false
-};
+};*/
