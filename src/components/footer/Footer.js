@@ -75,6 +75,7 @@ const SocialLogo = styled(Link)`
 const WebsiteRights = styled.small`
   color: #fff;
   margin-bottom: 12px;
+  text-align: center;
 `
 
 const SocialIcons = styled.div`

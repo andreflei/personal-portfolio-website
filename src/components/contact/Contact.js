@@ -1,18 +1,8 @@
 import React from 'react';
-import { useState } from 'react';
 import styled from "styled-components";
 import ContactForm from "./ContactForm";
-import Form from 'react-bootstrap/Button';
-import mailsvg from '../../images/message-369540.svg';
 
 const Contact = () => {
-    // const [message, setMessage] = useState(false);
-    //
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     setMessage(true);
-    // }
-
     return (
         <ContactContainer id="contact">
             <ContactH1>CONTACT</ContactH1>
@@ -40,6 +30,5 @@ const ContactH1 = styled.h1`
     font-size: 2rem;
   }
 `
-
 
 export default Contact;

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Icon1 from '../../images/undraw_react_y7wq.svg';
+import pizzaProject from '../../images/project-pizza-template.jpeg';
 
 const Portfolio = () => {
     return (
@@ -8,9 +9,9 @@ const Portfolio = () => {
             <PortfolioH1>PORTFOLIO</PortfolioH1>
             <PortfolioWrapper>
                 <PortfolioCard>
-                    <PortfolioIcon src={Icon1}/>
-                    <PortfolioH2>Video Play Website</PortfolioH2>
-                    <PortfolioP>This is a template Netflix clone created with React.</PortfolioP>
+                    <PortfolioIcon src={pizzaProject}/>
+                    <PortfolioH2>Pizza Template</PortfolioH2>
+                    <PortfolioP>This is a Template Design without logic functionality.</PortfolioP>
                 </PortfolioCard>
                 <PortfolioCard>
                     <PortfolioIcon src={Icon1}/>
@@ -70,8 +71,8 @@ const PortfolioCard = styled.div`
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  max-height: 340px;
-  padding: 30px;
+  max-height: 300px;
+  padding: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   transition: all 0.2s ease-in-out;
   
@@ -83,9 +84,11 @@ const PortfolioCard = styled.div`
 `
 
 const PortfolioIcon = styled.img`
-  height: 160px;
-  width: 160px;
+  width: 250px;
+  height: 300px;
   margin-bottom: 10px;
+  border-radius: 10px;
+  object-fit: fill;
 `
 
 const PortfolioH1 = styled.h1`

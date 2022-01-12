@@ -17,6 +17,7 @@ const Homescreen = () => {
                 <AboutH1>André Fleischhacker</AboutH1>
                 <AboutP>Junior Web Developer</AboutP>
                 <AboutBtnWrapper>
+                    {/*TODO: Important Button link to contact rework*/}
                     <Button to="contact" onMouseEnter={onHover}
                             onMouseLeave={onHover}
                             primary="true"
@@ -38,7 +39,7 @@ const AboutContainer = styled.div`
   padding: 0 30px;
   position: relative;
   z-index: 1;
-  height: 100vh; //fill complete screen height 
+  height: 100vh;
 
   :before {
     content: '';
