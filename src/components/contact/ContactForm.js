@@ -19,7 +19,6 @@ const ContactForm = () => {
     }
 
     const serviceMessage = {
-        class: '',
         text: ''
     }
 
@@ -49,7 +48,6 @@ const ContactForm = () => {
             const result = await axios.post(formsparkUrl, payload);
             console.log(result);
             setMessage({
-                class: 'background-color: green',
                 text: 'Thank you for your message, i will reply shortly.'
             });
             setFormState(initialFormState);
@@ -57,7 +55,6 @@ const ContactForm = () => {
         } catch (error) {
             console.log(error);
             setMessage({
-                class: 'background-color: red',
                 text: 'Sorry, there was a problem. Please try again or contact me on Xing.'
             });
         }
@@ -77,8 +74,6 @@ const ContactForm = () => {
 
     return (
         <ContactFormWrapper onSubmit={submitForm}>
-            {/*TODO: user feedback sended mail*/}
-            <ContactFormMessage>{message.text}</ContactFormMessage>
             <StyledLabel htmlFor="firstName">First name</StyledLabel>
             <StyledInput
                 onChange={updateFormInput}
@@ -86,6 +81,7 @@ const ContactForm = () => {
                 name="firstName"
                 id="firstName"
                 value={formState.firstName}
+                required
             />
             <StyledLabel htmlFor="lastName">Last name</StyledLabel>
             <StyledInput
@@ -94,6 +90,7 @@ const ContactForm = () => {
                 name="lastName"
                 id="lastName"
                 value={formState.lastName}
+                required
             />
             <StyledLabel htmlFor="email">Email</StyledLabel>
             <StyledInput
@@ -102,6 +99,7 @@ const ContactForm = () => {
                 name="email"
                 id="email"
                 value={formState.email}
+                required
             />
             <StyledLabel htmlFor="message">Message</StyledLabel>
             <StyledTextArea
@@ -109,6 +107,7 @@ const ContactForm = () => {
                 id="message"
                 name="message"
                 value={formState.message}
+                required
             />
             <ReCAPTCHA
                 ref={recaptchaRef}
@@ -122,6 +121,7 @@ const ContactForm = () => {
                 dark="true"
                 primary="true"
             >{submitting ? 'Submitting...' : 'Submit'}</Button>
+            <ContactFormMessage>{message.text}</ContactFormMessage>
         </ContactFormWrapper>
     )
 };
@@ -164,7 +164,10 @@ const StyledTextArea = styled.textarea`
 `
 
 const ContactFormMessage = styled.div`
-
+  margin: 15px;
+  font-weight: 700;
+  color: #F4A261;
+  text-align: center;
 `
 
 export default ContactForm;
