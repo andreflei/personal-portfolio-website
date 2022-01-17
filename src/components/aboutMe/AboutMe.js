@@ -4,6 +4,7 @@ import Travelling from '../../images/undraw_adventure_re_ncqp.svg';
 import Bike from '../../images/undraw_biking_kc4f.svg';
 import Cooking from '../../images/undraw_barbecue_3x93.svg';
 import Gaming from '../../images/undraw_gaming_re_cma2.svg';
+import {AboutMeText} from './AboutMeText';
 
 const AboutMe = () => {
 
@@ -11,9 +12,7 @@ const AboutMe = () => {
         <AboutMeContainer id="aboutMe">
             <AboutMeH1>ABOUT</AboutMeH1>
             <AboutMeWrapper>
-                <AboutMeP>Hello, my name is André Fleischhacker and i'm a self-thought web developer. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis </AboutMeP>
+                <AboutMeP>{AboutMeText}</AboutMeP>
                 <AboutMeHobbyWrapper>
                     <HobbyH2>What i love to do:</HobbyH2>
                     <HobbyItem>

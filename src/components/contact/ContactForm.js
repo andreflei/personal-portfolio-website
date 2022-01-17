@@ -78,9 +78,7 @@ const ContactForm = () => {
     return (
         <ContactFormWrapper onSubmit={submitForm}>
             {/*TODO: user feedback sended mail*/}
-            {message && <div>
-                {message.text}
-            </div>}
+            <ContactFormMessage>{message.text}</ContactFormMessage>
             <StyledLabel htmlFor="firstName">First name</StyledLabel>
             <StyledInput
                 onChange={updateFormInput}
@@ -165,13 +163,8 @@ const StyledTextArea = styled.textarea`
   margin-bottom: 18px;
 `
 
-// const WrapperInput = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   margin-bottom: 10px;
-//   width: 90%;
-// `
+const ContactFormMessage = styled.div`
+
+`
 
 export default ContactForm;

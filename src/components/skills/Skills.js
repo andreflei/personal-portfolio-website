@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import {FaHtml5,FaCss3Alt,SiJavascript,FaReact,SiStyledComponents,FaJava,SiMysql,FaGit} from "react-icons/all";
+import {
+    FaHtml5,
+    FaCss3Alt,
+    SiJavascript,
+    FaReact,
+    SiStyledComponents,
+    FaJava,
+    SiMysql,
+    FaGit,
+    FaAngular, SiTypescript
+} from "react-icons/all";
 
 const Skills = () => {
     return (
@@ -18,6 +28,14 @@ const Skills = () => {
                     <SkillsIcon>
                         <SiJavascript/>
                         <SkillsP>JavaScript</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <SiTypescript/>
+                        <SkillsP>TypeScript</SkillsP>
+                    </SkillsIcon>
+                    <SkillsIcon>
+                        <FaAngular/>
+                        <SkillsP>Angular</SkillsP>
                     </SkillsIcon>
                     <SkillsIcon>
                         <FaReact/>

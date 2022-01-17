@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md';
 import styled from 'styled-components';
-import {Button} from '../ButtonElement';
+import {ButtonLink} from '../ButtonElement';
 import aboutImg from '../../images/undraw_Coding_re_iv62.svg';
 
 const Homescreen = () => {
@@ -18,13 +18,13 @@ const Homescreen = () => {
                 <AboutP>Junior Web Developer</AboutP>
                 <AboutBtnWrapper>
                     {/*TODO: Important Button link to contact rework*/}
-                    <Button to="contact" onMouseEnter={onHover}
+                    <ButtonLink to="contact" onMouseEnter={onHover}
                             onMouseLeave={onHover}
                             primary="true"
                             dark="true"
                     >
                         Get in contact {hover ? <ArrowForward/> : <ArrowRight/>}
-                    </Button>
+                    </ButtonLink>
                 </AboutBtnWrapper>
             </AboutContent>
         </AboutContainer>

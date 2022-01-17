@@ -12,10 +12,10 @@ const Contact = () => {
 };
 
 const ContactContainer = styled.div`
-  height: 100%;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
   background: #203B46;
 `
