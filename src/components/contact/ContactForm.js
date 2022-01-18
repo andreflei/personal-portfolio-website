@@ -10,7 +10,6 @@ const ContactForm = () => {
     const recaptchaKey = '******';
     const recaptchaRef = useRef();
 
-
     const initialFormState = {
         firstName: '',
         lastName: '',
@@ -38,6 +37,10 @@ const ContactForm = () => {
         window.grecaptcha.reset();
     }
 
+    const resetMessage = () => {
+        setMessage({text: ''});
+    }
+
     const postSubmission = async () => {
         const payload = {
             ...formState,
@@ -45,19 +48,30 @@ const ContactForm = () => {
         };
 
         try {
-            const result = await axios.post(formsparkUrl, payload);
-            console.log(result);
+            await axios.post(formsparkUrl, payload);
             setMessage({
                 text: 'Thank you for your message, i will reply shortly.'
             });
             setFormState(initialFormState);
             resetCaptcha();
         } catch (error) {
-            console.log(error);
-            setMessage({
-                text: 'Sorry, there was a problem. Please try again or contact me on Xing.'
-            });
+            if(!payload["g-recaptcha-response"].length) {
+                setMessage({
+                    text: 'Please click the reCAPTCHA checkbox above.'
+                });
+                setTimeout(() => {
+                    resetMessage();
+                }, 5000);
+            } else {
+                setMessage({
+                    text: 'Sorry, there was a problem. Please try again or contact me on Xing.'
+                });
+                setTimeout(() => {
+                    resetMessage();
+                }, 5000);
+            }
         }
+        setRecaptchaToken('');
     }
 
     const updateFormInput = (event) => {
@@ -155,12 +169,16 @@ const StyledInput = styled.input`
   width: 80%;
   min-height: 30px;
   margin-bottom: 18px;
+  font-size: 16px;
+  padding-left: 5px;
 `
 
 const StyledTextArea = styled.textarea`
   width: 80%;
   min-height: 150px;
   margin-bottom: 18px;
+  font-size: 16px;
+  padding: 0 5px 0 5px;
 `
 
 const ContactFormMessage = styled.div`

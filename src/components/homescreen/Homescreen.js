@@ -17,7 +17,6 @@ const Homescreen = () => {
                 <AboutH1>André Fleischhacker</AboutH1>
                 <AboutP>Junior Web Developer</AboutP>
                 <AboutBtnWrapper>
-                    {/*TODO: Important Button link to contact rework*/}
                     <ButtonLink to="contact" onMouseEnter={onHover}
                             onMouseLeave={onHover}
                             primary="true"

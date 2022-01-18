@@ -74,6 +74,7 @@ const AboutMeWrapper = styled.div`
 
 const AboutMeP = styled.p`
   font-size: 1.2rem;
+  letter-spacing: 1px;
   color: #E9C46A;
   align-self: flex-start;
   text-align: start;

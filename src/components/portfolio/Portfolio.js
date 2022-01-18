@@ -1,27 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import Icon1 from '../../images/undraw_react_y7wq.svg';
-import pizzaProject from '../../images/project-pizza-template.jpeg';
+// import pizzaProject from '../../images/project-pizza-template.jpeg';
+import weatherApp from '../../images/basic-weather-app.png';
+import videoDbSite from '../../images/video-game-db.png';
 
 const Portfolio = () => {
     return (
         <PortfolioContainer id="portfolio">
             <PortfolioH1>PORTFOLIO</PortfolioH1>
             <PortfolioWrapper>
-                <PortfolioCard>
-                    <PortfolioIcon src={pizzaProject}/>
-                    <PortfolioH2>Pizza Template</PortfolioH2>
-                    <PortfolioP>This is a Template Design without logic functionality.</PortfolioP>
+                {/*<PortfolioCard>*/}
+                {/*    <PortfolioIcon src={pizzaProject}/>*/}
+                {/*    <PortfolioH2>Pizza Template</PortfolioH2>*/}
+                {/*    <PortfolioP>This is a Template Design without logic functionality.</PortfolioP>*/}
+                {/*</PortfolioCard>*/}
+                <PortfolioCard href="https://basic-weather-app-af.web.app" target="_blank" aria-label="Basic weather app">
+                    <PortfolioIcon src={weatherApp}/>
+                    <PortfolioH2>Basic weather app</PortfolioH2>
+                    <PortfolioP>A basic weather application. Used technologies: Angular, TypeScript, SCSS, OpenWeather API.</PortfolioP>
                 </PortfolioCard>
-                <PortfolioCard>
-                    <PortfolioIcon src={Icon1}/>
-                    <PortfolioH2>Project 2</PortfolioH2>
-                    <PortfolioP>This is a template Netflix clone created with React.</PortfolioP>
-                </PortfolioCard>
-                <PortfolioCard>
-                    <PortfolioIcon src={Icon1}/>
-                    <PortfolioH2>Project 3</PortfolioH2>
-                    <PortfolioP>This is a template Netflix clone created with React.</PortfolioP>
+                <PortfolioCard href="https://video-game-db-site-af.web.app" target="_blank" aria-label="Video Game DB site">
+                    <PortfolioIcon src={videoDbSite}/>
+                    <PortfolioH2>Video Game DB</PortfolioH2>
+                    <PortfolioP>Video Game search site. Used technologies: Angular, TypeScript, SCSS, RAWG API.</PortfolioP>
                 </PortfolioCard>
             </PortfolioWrapper>
         </PortfolioContainer>
@@ -35,21 +36,13 @@ const PortfolioContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: #264653;
-  
-  @media screen and (max-width: 768px) {
-    height: 1100px;
-  }
-  
-  @media screen and (max-width: 480px) {
-    height: 1300px;
-  }
 `
 
 const PortfolioWrapper = styled.div`
   max-width: 1000px;
   margin: 0 auto 64px auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 50px;
@@ -64,8 +57,9 @@ const PortfolioWrapper = styled.div`
   }
 `
 
-const PortfolioCard = styled.div`
+const PortfolioCard = styled.a`
   background: #fff;
+  color: #000;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -75,6 +69,7 @@ const PortfolioCard = styled.div`
   padding: 5px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   transition: all 0.2s ease-in-out;
+  text-decoration: none;
   
   &:hover {
     transform: scale(1.02);
@@ -88,7 +83,6 @@ const PortfolioIcon = styled.img`
   height: 300px;
   margin-bottom: 10px;
   border-radius: 10px;
-  object-fit: fill;
 `
 
 const PortfolioH1 = styled.h1`

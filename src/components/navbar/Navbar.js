@@ -20,7 +20,7 @@ const Navbar = ({toggleIsOpen}) => {
         window.addEventListener('scroll', changeNav)
     }, []);
 
-    //TODO: scroll duration is faster
+
     const toggleHome = () => {
         scroll.scrollToTop();
     };
@@ -64,9 +64,6 @@ const Navbar = ({toggleIsOpen}) => {
                         >CONTACT</NavLinks>
                     </NavItem>
                 </NavMenu>
-                {/*<NavBtn>*/}
-                {/*    <NavBtnLink to="/signin">Sign In</NavBtnLink>*/}
-                {/*</NavBtn>*/}
             </NavbarContainer>
         </Nav>
     );
