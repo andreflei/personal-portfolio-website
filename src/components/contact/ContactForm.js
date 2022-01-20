@@ -5,9 +5,9 @@ import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactForm = () => {
-    const formsparkFormId = '*****';
+    const formsparkFormId = 'Wii9yXJb';
     const formsparkUrl = `https://submit-form.com/${formsparkFormId}`;
-    const recaptchaKey = '******';
+    const recaptchaKey = '6LfXBAUeAAAAACeJxJQobqY6iWPfhowsZihXEA0U';
     const recaptchaRef = useRef();
 
     const initialFormState = {

@@ -18,6 +18,11 @@ const ContactContainer = styled.div`
   justify-content: center;
   align-items: center;
   background: #203B46;
+  
+  @media screen and (min-height: 1200px) {
+    height: calc(100vh - 80px);
+    min-height: 1000px;
+  } 
 `
 
 const ContactH1 = styled.h1`
@@ -29,6 +34,11 @@ const ContactH1 = styled.h1`
   @media screen and (max-width: 480px) {
     font-size: 2rem;
   }
+
+  @media screen and (min-height: 1200px) {
+    margin-top: 48px;
+  }
+
 `
 
 export default Contact;

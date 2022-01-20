@@ -9,7 +9,7 @@ import {AboutMeText} from './AboutMeText';
 const AboutMe = () => {
 
     return (
-        <AboutMeContainer id="aboutMe">
+        <AboutMeContainer  id="aboutMe">
             <AboutMeH1>ABOUT</AboutMeH1>
             <AboutMeWrapper>
                 <AboutMeP>{AboutMeText}</AboutMeP>

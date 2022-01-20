@@ -11,12 +11,12 @@ const Homescreen = () => {
     const onHover = () => setHover(!hover);
 
     return (
-        <AboutContainer id="home">
-            <AboutContent>
-                <AboutImg src={aboutImg} alt='Developer activity'/>
-                <AboutH1>André Fleischhacker</AboutH1>
-                <AboutP>Junior Web Developer</AboutP>
-                <AboutBtnWrapper>
+        <HomeContainer id="home">
+            <HomeContent>
+                <HomeImg src={aboutImg} alt='Developer activity'/>
+                <HomeH1>André Fleischhacker</HomeH1>
+                <HomeP>Junior Web Developer</HomeP>
+                <HomeBtnWrapper>
                     <ButtonLink to="contact" onMouseEnter={onHover}
                             onMouseLeave={onHover}
                             primary="true"
@@ -24,13 +24,13 @@ const Homescreen = () => {
                     >
                         Get in contact {hover ? <ArrowForward/> : <ArrowRight/>}
                     </ButtonLink>
-                </AboutBtnWrapper>
-            </AboutContent>
-        </AboutContainer>
+                </HomeBtnWrapper>
+            </HomeContent>
+        </HomeContainer>
     );
 };
 
-const AboutContainer = styled.div`
+const HomeContainer = styled.div`
   background: #203B46;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@ const AboutContainer = styled.div`
   }
 `
 
-const AboutImg = styled.img`
+const HomeImg = styled.img`
   max-width: 280px;
   margin-bottom: 25px;
 
@@ -60,7 +60,7 @@ const AboutImg = styled.img`
   }
 `
 
-const AboutContent = styled.div`
+const HomeContent = styled.div`
   z-index: 3;
   max-width: 1200px;
   position: absolute;
@@ -70,7 +70,7 @@ const AboutContent = styled.div`
   align-items: center;
 `
 
-const AboutH1 = styled.h1`
+const HomeH1 = styled.h1`
   color: #FFFFFF;
   font-size: 48px;
   text-align: center;
@@ -84,7 +84,7 @@ const AboutH1 = styled.h1`
   }
 `
 
-const AboutP = styled.p`
+const HomeP = styled.p`
   margin-top: 24px;
   color: #FFFFFF;
   font-size: 24px;
@@ -100,7 +100,7 @@ const AboutP = styled.p`
   }
 `
 
-const AboutBtnWrapper = styled.div`
+const HomeBtnWrapper = styled.div`
   margin-top: 32px;
   display: flex;
   flex-direction: column;

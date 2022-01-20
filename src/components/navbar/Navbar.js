@@ -70,7 +70,6 @@ const Navbar = ({toggleIsOpen}) => {
 };
 
 const Nav = styled.nav`
-  //background: #000;
   background: ${({scrollNav}) => (scrollNav ? '#F4A261' : 'transparent')};
   height: 80px;
   margin-top: -80px;
@@ -119,7 +118,7 @@ const NavLogo = styled(LinkR)`
 const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 968px) { //früher: 768px
+  @media screen and (max-width: 968px) {
     display: block;
     position: absolute;
     top: 0;
@@ -128,7 +127,6 @@ const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: ${({scrollNav}) => (scrollNav ? '#000000' : '#FFFFFF')};
-    
   }
 `
 
@@ -137,9 +135,8 @@ const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  //margin-right: -22px; //evtl nicht notwendig bei mir 
 
-  @media screen and (max-width: 968px) {//früher: 768px
+  @media screen and (max-width: 968px) {
     display: none;
   }
 `
@@ -169,34 +166,5 @@ const NavLinks = styled(LinkS)`
     border-bottom: ${({scrollNav}) => (scrollNav ? '3px solid #000000' : '')}
   }
 `
-
-// const NavBtn = styled.div`
-//   display: flex;
-//   align-items: center;
-//
-//   @media screen and (max-width: 768px) {
-//     display: none;
-//   }
-// `
-
-// const NavBtnLink = styled(LinkR)`
-//   border-radius: 50px;
-//   background: #01bf71;
-//   white-space: nowrap;
-//   padding: 10px 22px;
-//   color: #010606;
-//   font-size: 16px;
-//   outline: none;
-//   border: none;
-//   cursor: pointer;
-//   transition: all 0.2s ease-in-out;
-//   text-decoration: none;
-//
-//   &:hover {
-//     transition: all 0.2s ease-in-out;
-//     background: #fff;
-//     color: #010606;
-//   }
-// `
 
 export default Navbar;

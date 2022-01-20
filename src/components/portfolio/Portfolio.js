@@ -1,19 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-// import pizzaProject from '../../images/project-pizza-template.jpeg';
-import weatherApp from '../../images/basic-weather-app.png';
-import videoDbSite from '../../images/video-game-db.png';
+import weatherApp from '../../images/basic-weather-app.jpeg';
+import videoDbSite from '../../images/video-game-db.jpeg';
 
 const Portfolio = () => {
     return (
         <PortfolioContainer id="portfolio">
             <PortfolioH1>PORTFOLIO</PortfolioH1>
             <PortfolioWrapper>
-                {/*<PortfolioCard>*/}
-                {/*    <PortfolioIcon src={pizzaProject}/>*/}
-                {/*    <PortfolioH2>Pizza Template</PortfolioH2>*/}
-                {/*    <PortfolioP>This is a Template Design without logic functionality.</PortfolioP>*/}
-                {/*</PortfolioCard>*/}
                 <PortfolioCard href="https://basic-weather-app-af.web.app" target="_blank" aria-label="Basic weather app">
                     <PortfolioIcon src={weatherApp}/>
                     <PortfolioH2>Basic weather app</PortfolioH2>

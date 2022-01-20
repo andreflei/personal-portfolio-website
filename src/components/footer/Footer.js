@@ -73,6 +73,7 @@ const SocialLogo = styled(Link)`
 `
 
 const WebsiteRights = styled.small`
+  font-size: 12px;
   color: #fff;
   margin-bottom: 12px;
   text-align: center;
