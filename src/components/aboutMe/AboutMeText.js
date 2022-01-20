@@ -1,2 +1,2 @@
-export const AboutMeText = "Hello, welcome on my Personal Portfolio Website. My name is André and i'm a Junior Developer with focus on (Frontend-) Web-Development. Currently i´m open for my first full-time Job in the area of" +
-    " Web-Development. Feel free to leave a message via the contact form below or Xing. My Xing and GitHub profiles are linked in the footer.";
+export const AboutMeText = "Hello, welcome to my Personal Portfolio Website. My name is André and i'm a Junior Developer with focus on (Frontend-) Web-Development. I am currently looking for my first full-time job in software development, specifically web development." +
+    " I want to improve my skills and experience. Feel free to leave a message via the contact form below or Xing. My Xing and GitHub profiles are linked in the footer.";

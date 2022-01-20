@@ -129,7 +129,7 @@ const ContactForm = () => {
                 onChange={updateRecaptchaToken}
             />
             <Button
-                style={{marginTop: 10}}
+                style={{marginTop: 15}}
                 type="submit"
                 disabled={submitting}
                 dark="true"
@@ -149,7 +149,7 @@ const ContactFormWrapper = styled.form`
   margin-bottom: 50px;
   padding: 24px 0 24px 0;
   border: 1px solid #fff;
-
+  
   @media screen and (max-width: 968px) {
     width: 75%;
   }
@@ -157,12 +157,20 @@ const ContactFormWrapper = styled.form`
   @media screen and (max-width: 480px) {
     width: 95%;
   }
+
+  @media screen and (min-height: 1200px) {
+    min-height: 1000px;
+  }
 `
 
 const StyledLabel = styled.label`
   margin-bottom: 10px;
   font-size: 1.5rem;
   color: #FFFFFF;
+
+  @media screen and (min-height: 1200px) {
+    margin-bottom: 25px;
+  }
 `
 
 const StyledInput = styled.input`
@@ -171,6 +179,11 @@ const StyledInput = styled.input`
   margin-bottom: 18px;
   font-size: 16px;
   padding-left: 5px;
+
+  @media screen and (min-height: 1200px) {
+    min-height: 50px;
+    margin-bottom: 30px;
+  }
 `
 
 const StyledTextArea = styled.textarea`
@@ -179,6 +192,11 @@ const StyledTextArea = styled.textarea`
   margin-bottom: 18px;
   font-size: 16px;
   padding: 0 5px 0 5px;
+
+  @media screen and (min-height: 1200px) {
+    min-height: 250px;
+    margin-bottom: 25px;
+  }
 `
 
 const ContactFormMessage = styled.div`
